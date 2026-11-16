@@ -180,3 +180,20 @@ Space 使用工作区标题栏，终端以缩进层级显示。
 屏幕和导航的连接错误分别跟踪，恢复后自动清除对应提示。
 发送失败等操作错误会保留，避免被后台刷新覆盖。
 `python tests/layout-recovery.py` 验证自动恢复和三种屏幕宽度。
+
+## Codex 常用斜杠命令
+
+识别为 Codex 时，通用按键下方显示“/ 常用命令”。
+点击后打开菜单，不会占用屏幕内容的展示区域。
+
+提供历史会话 `/resume`、模型 `/model`、状态 `/status`、
+权限 `/permissions`、压缩上下文 `/compact`、新对话 `/new`、
+查看改动 `/diff`、代码审查 `/review` 和计划模式 `/plan`。
+
+选择后仅填入网页输入框，按发送才执行。
+已有草稿可用“恢复原草稿”找回，发送命令后也可恢复。
+其他 Agent 隐藏菜单；已结束的终端禁用入口。
+具体命令是否可用，取决于远端 Codex 版本和当前会话状态。
+
+命令依据：[Codex 官方命令说明](https://learn.chatgpt.com/docs/developer-commands?surface=cli)。
+`python tests/codex-commands.py` 验证命令选择、草稿恢复和移动布局。

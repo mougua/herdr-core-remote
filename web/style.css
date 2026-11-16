@@ -26,3 +26,18 @@ dialog{background:var(--panel);color:var(--text);border:1px solid var(--border);
 .space-terminals .terminal-button small{font-size:10px}
 .space-terminals .add-terminal{font-size:11px;margin-bottom:2px}
 @media(max-width:760px){.wrap-indicator{font-size:10px}.screen-toolbar>div{flex-wrap:wrap;justify-content:flex-end}}
+
+#keys{flex-wrap:wrap;overflow-x:visible}#keys button{flex-shrink:0}
+#codex-keys{display:flex;align-items:center;gap:12px;flex-shrink:0;padding-bottom:10px}
+#slash-open{color:#bbd7f2;background:#1c2b3b;border-color:#405c76;font-size:12px;min-height:40px}
+#codex-keys>span{font-size:10px;color:var(--muted)}
+.slash-heading{display:flex;justify-content:space-between;align-items:center;gap:12px}
+#slash-dialog{width:min(560px,calc(100vw - 24px))}
+#slash-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:18px}
+.slash-command{text-align:left;display:grid;gap:3px;padding:12px;background:#1a2633;min-width:0}
+.slash-command code{font:12px/1.5 Consolas,monospace;color:var(--accent)}
+.slash-command strong{font-size:13px}.slash-command small{font-size:11px;margin:0;line-height:1.5}
+#restore-draft{font-size:10px;padding:5px 7px;min-height:32px;white-space:nowrap}
+@media(max-width:760px){#slash-dialog{padding:18px}#slash-list{gap:6px}.slash-command{padding:10px}#codex-keys{gap:9px}#codex-keys>span{font-size:9px}.compose-bottom{flex-wrap:wrap}#send-hint{flex:1;min-width:100px}#restore-draft{min-height:36px}#screen{min-height:70px}}
+
+#connection.connected::before{content:'●';color:#4ade80;margin-right:5px}
