@@ -1,0 +1,8 @@
+{
+  "port": 8375,
+  "hc": "hc",
+  "tunnel": "none",
+  "tunnel_name": "herdr",
+  "tunnel_config": "~/.cloudflared/config-herdr.yml",
+  "public_url": ""
+}
